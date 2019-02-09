@@ -9,7 +9,7 @@ sub MAIN ( Str :$command = "usage",
 {
     say "Welcome to the beerchain";
     if $command eq "drink" {
-	Chain::drink($brand, $quantity);
+	drink($brand, $quantity);
     } else {
 	say "Don't know how to handle $command";
     }
