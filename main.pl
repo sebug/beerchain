@@ -1,10 +1,14 @@
 use v6;
 
-sub MAIN (Str :$command = "usage",
+sub MAIN ( Str :$command = "usage",
 	  Str :$brand = "",
-	  Num :$quantity = Num(3))
+	  Num :$quantity = Num(1) )
 {
     say "Welcome to the beerchain";
-    $command.say
+    if $command eq "drink" {
+	say "drinking $quantity $brand";
+    } else {
+	say "Don't know how to handle $command";
+    }
 }
 
